@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Movie = (props) => (
@@ -11,9 +11,8 @@ const Movie = (props) => (
 export default Movie;
 
 
-
-// static propTypes = {
-//   movie: PropTypes.shape({
-//     title: PropTypes.string.isRequired
-//   }),
-// }
+Movie.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};
